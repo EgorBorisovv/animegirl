@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  background-color: #313030;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a{
+  text-decoration: none;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover{
+  color: rgb(80, 78, 78);
+}
+/* *{
+  border: 1px solid red;
+} */
+.header{
+  grid-area: head;
+  background: #E64F4F;
+  background: linear-gradient(135deg, #E64F4F, #9D21EB);
+  padding: 0;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+.header__logo{
+  box-sizing: border-box;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+}
+.Sidebar{
+  grid-area: side;
+  background: #E64F4F;
+  background: linear-gradient(135deg, #E64F4F, #9D21EB);
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+}
+.Sidebar__link{
+  margin: auto;
+}
+.Content{
+  grid-area: cont;
+}
+.App{
+  width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+  "head head head"
+  "side cont cont";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+.Content__wallpaper{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+.Content__logo{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.Profile{
+  display: flex;
+}
+.Profile__info{
+  margin-left: 50px;
+}
+.createrPosts{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.createrPosts__text{
+  margin: 0 auto;
+  font-size: 36px;
+}
+.createrPosts__block{
+  width: 50%;
+  margin-top: 10px;
+  margin: 0 auto;
+}
+.createrPosts__input{
+  width: 75%;
+  height: 50px;
+}
+.createrPosts__button{
+    width: 23%;
+    height: 55px;
+    background: #E64F4F;
+    background: linear-gradient(135deg, #E64F4F, #9D21EB);
+    border: 0;
+}
+.createrPosts__button:hover{
+    cursor: pointer;
+}
+.Posts{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Post{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background-color: rgb(216, 213, 213);
+  height: 500px;
+  color: black;
+  border-radius: 5%;
+  margin-top: 50px;
+}
+.Post__image{
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5%;
+  margin: auto;
+}
+.Post__discription{
+  font-size: 25px;
+  margin:auto;
 }
